@@ -14,12 +14,13 @@ This distribution is not intended for extended enterprise use.
 * attribute based policies to control data sharing in a multi-tenant data ecosystem.
 * workflows perform a sequence of operations to assemble the data to be shared.
 * graphical workflow editor 
+* supports federation of multiple Bitnobi servers. A workflow running on one Bitnobi server can merge data from one or more external Bitnobi servers with access controlled through policies.
 * workflow operations extensible through Python to support packages such as Tensorflow
 * basic data visualization and charting built in.
 * supports data sources from SQL databases (currently MySQL), CSV files and JSON files.
 * interfaces to external packages such as Watson Analytics for data visualization, and Jupyter Notebooks for algorithm exploration.
 * maintains audit log of user actions and datasource accesses. Audit log is accessible by admin user only. Audit log can  be used as a datasource in a workflow for log analysis.
-* supports federation of multiple Bitnobi servers. A workflow running on one Bitnobi server can merge data from one or more external Bitnobi servers with access controlled through policies.
+
 
 
 ### Recent changes
