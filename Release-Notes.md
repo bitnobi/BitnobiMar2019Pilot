@@ -22,10 +22,12 @@ This distribution is not intended for extended enterprise use.
 * maintains audit log of user actions and datasource accesses. Audit log is accessible by admin user only. Audit log can  be used as a datasource in a workflow for log analysis.
 
 
+
 ### Recent changes
 * admin UI functionality for creating, editing and testing connections to external Bitnobi servers.
 * new ExternalDS (External Data Source), DataMover and Union workflow elements.
 * audit log records accesses from external Bitnobi servers along with remote hostname and userid.
+* uses Hashicorp Vault for storing remote Bitnobi passwords.
 
 
 ### Known limitations
