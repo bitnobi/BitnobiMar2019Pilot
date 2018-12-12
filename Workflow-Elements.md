@@ -9,7 +9,7 @@ Below is a summary of the element types. Clicking on the element name will jump 
 |**Datasources**| | provides ways of getting data|
 | |[Audit Log](#audit-log)| records timestamped Bitnobi events |
 | |[Datasource](#datasource) |uses result set from the last run of the specified workflow. |
-| |[ExternalDS](#externalds) |accesses result set from a remote Bitnobi server. |
+| |[ExternalDS](#externalds) |access result set from a remote Bitnobi server. |
 | |[Importer](#importer) | allows user to upload a .csv or .json file to use as a datasource |
 | |[Jupyter](#jupyter) | uses output of a Jupyter Notebooks session as a datasource. |
 | |[SQL](#sql)| allows specifying an external SQL database and query to use as a datasource|
@@ -44,8 +44,13 @@ Below is a description of each of the element types.
 * the properties pane displays a drop-down list of workflow names with result sets available to you. 
 Only those results where the a policy matches your user attributes will appear in this list.
 
-
 ## ExternalDS
+* access a result set from a remote Bitnobi server
+* in the properties of this element, there is an 'Open Input Setting' button that pops up a dialog box to allow selecting a remote bitnobi server. You can then press the "Search" button to get a list of available result sets on that server in the "Available Data" pane, or enter a query string to match specific names. Pressing the "->" button beside a result set will select it as an input, then press "Save".
+* note that your user attributes are sent to the remote bitnobi server these are applied against its the policies on that server to determine which result sets are accessible to you. Only the result sets accessible to you will appear in the "Available Data" pane.
+* when you press the "Apply" button for this element, it will fetch a preview of the data from the remote bitnobi server.
+* when another operations element is linked to an ExternalDS, that element will be executed on the remote bitnobi server hosting the result set and any intermediate data will remain on the remote server.
+* entries in the "Select Remote Source" list are defined by a Bitnobi administrator using the "Network Management > Bitnobi Servers" page.
 
 ## Importer
 * allows uploading an external data file to Bitnobi to use a a datasource.
@@ -82,6 +87,9 @@ Only those results where the a policy matches your user attributes will appear i
 
 
 ## Data Mover
+* moves temporary data from a remote Bitnobi server to your local Bitnobi server.
+* a chain of workflow elements attached to an ExternalDS are all executed on the remote Bitnobi server. Once a Data Mover is added to the chain, the data flow after this point will execute on the local Bitnobi server.
+* typically a Data Mover element is placed before a Join or Union element to allow merging data across servers. 
 
 ## Group
 
@@ -95,6 +103,7 @@ status-id,status-text
 1, active
 ```
 Then the join operation choosing "status-id" as the common column will produce an output like input 1 but with an extra column "status-text" containing "inactive" wherever "status-id" is 0 and "active" wherever "status-id" is 1.
+* note that both inputs to a Join element must be on the same Bitnobi server. A Data Mover is required to move the data flow from an ExternalDS to the local server prior to a Join.
 
 ## MapReduce
 * in the properties of this element, there is an 'edit' button that pops up the MapReduce editor. There are two main editing panes - for the Map function and for the Reduce function. Both execute Javascript code.
