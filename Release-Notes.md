@@ -11,10 +11,10 @@ This distribution is not intended for extended enterprise use.
 
 
 ### Key features
+* the focus of this release is to support federation of multiple Bitnobi servers. A workflow running on one Bitnobi server can merge data from one or more external Bitnobi servers with access controlled through policies.
 * attribute based policies to control data sharing in a multi-tenant data ecosystem.
 * workflows perform a sequence of operations to assemble the data to be shared.
 * graphical workflow editor 
-* supports federation of multiple Bitnobi servers. A workflow running on one Bitnobi server can merge data from one or more external Bitnobi servers with access controlled through policies.
 * workflow operations extensible through Python to support packages such as Tensorflow
 * basic data visualization and charting built in.
 * supports data sources from SQL databases (currently MySQL), CSV files and JSON files.
@@ -22,14 +22,11 @@ This distribution is not intended for extended enterprise use.
 * maintains audit log of user actions and datasource accesses. Audit log is accessible by admin user only. Audit log can  be used as a datasource in a workflow for log analysis.
 
 
-
 ### Recent changes
-* new Admin > Network Management page. Allows creating, editing and testing connections to external Bitnobi servers. Available to admin users only.
-* new ExternalDS (External Data Source) and DataMover workflow elements.
+* admin UI functionality for creating, editing and testing connections to external Bitnobi servers.
+* new ExternalDS (External Data Source), DataMover and Union workflow elements.
 * audit log records accesses from external Bitnobi servers along with remote hostname and userid.
-* admin UI functionality for user administration and customization.
-* timestamped audit log of user signin/signout, policy modifications, workflow execution, datasource access.
-* backup and restore of complete Bitnobi state.
+
 
 ### Known limitations
 * the distribution installs everything into a single docker container. 
