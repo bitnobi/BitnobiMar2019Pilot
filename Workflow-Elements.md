@@ -50,7 +50,7 @@ Only those results where the a policy matches your user attributes will appear i
 * note that your user attributes are sent to the remote bitnobi server these are applied against its the policies on that server to determine which result sets are accessible to you. Only the result sets accessible to you will appear in the "Available Data" pane.
 * when you press the "Apply" button for this element, it will fetch a preview of the data from the remote bitnobi server.
 * when another operations element is linked to an ExternalDS, that element will be executed on the remote bitnobi server hosting the result set and any intermediate data will remain on the remote server.
-* entries in the "Select Remote Source" list are defined by a Bitnobi administrator using the "Network Management > Bitnobi Servers" page.
+* entries in the "Select Remote Source" list must be defined by a Bitnobi administrator using the "Network Management > Bitnobi Servers" page.
 
 ## Importer
 * allows uploading an external data file to Bitnobi to use a a datasource.
@@ -150,7 +150,8 @@ io.writeOutput(['john','2'])
 * allows restricting which rows are passed along by creating "where" clauses that match conditions on specific columns. Note that for numeric columns, it may be necessary to use the "Alter" block to cast the datatype as "Integer" or "Float" to get proper numeric comparisons (e.g. selecting rows where id < 50). For string datatype the comparison is in dictionary (lexicographic) order. String comparisons can also use the "like" operation which matches substrings.
 
 ## Union
-
+* concatenates two data sets with the same schema (like SQL Union).
+* It does not remove duplicate rows between the two input data sets.
 
 *** 
 # Result
