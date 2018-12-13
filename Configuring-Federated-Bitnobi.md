@@ -1,0 +1,1 @@
+This release of Bitnobi allows one Bitnobi server to access result sets from one or more remote Bitnobi servers under policy control.
