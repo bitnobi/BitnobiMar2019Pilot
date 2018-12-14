@@ -20,7 +20,9 @@ Here is a sample workflow that joins an external datasource with local data:
 
 [[images/sample-federated-workflow.PNG]]
 
-* the 
+* the workflow segment starting with "External DS", then "Select" then "Python" is executed on the Remote Bitnobi and the "Data Mover" element moves the intermediate data to the Originating Bitnobi.
+* the workflow segment starting with "Datasource", then "Select", then "Python" is executed on the Originating Bitnobi and then "Join"ed with the data stream from the Remote Bitnobi.
+* all intermediate data created during workflow execution on both the Remote and Originating Bitnobi is deleted.
 
 
 
