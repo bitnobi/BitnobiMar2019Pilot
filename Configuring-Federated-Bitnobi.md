@@ -1,4 +1,4 @@
-Federated Botnobi servers allows a Bitnobi user logged into one Bitnobi server (Originating Bitnobi) to create a workflow that can merge data from one or more Remote Bitnobi servers with access controlled through policies. An example of such a configuration is below:
+Federated Bitnobi servers allows a Bitnobi user logged into one Bitnobi server (Originating Bitnobi) to create a workflow that can merge data from one or more Remote Bitnobi servers with access controlled through policies. An example of such a configuration is below:
 
 [[images/bitnobi-federation-configuration-1.png]]
 
