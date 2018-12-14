@@ -8,6 +8,6 @@
   * [[Backup and Restore|Backup and Restore]]
 * Using Bitnobi
   * [[Demo videos]]
-  * [[Workflow Elements]]
   * [[Federation Overview]]
+  * [[Workflow Elements]]
 
