@@ -36,6 +36,7 @@ This set of tests should be run after Bitnobi is deployed to a new server to ver
 ### 5. create a report "python test", using "python test" result set
 * create a bar chart
 * select "name" for x axis, "id" for y axis
+* select "sum" for Metric
 * should show justin as 1, john as 2.
 
 ### 6. create a Jupyter Notebook named "jupyter test"
