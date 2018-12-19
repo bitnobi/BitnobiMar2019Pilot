@@ -1,6 +1,6 @@
 This set of tests should be run if Bitnobi is deployed to two servers (or VMs) to verify Federation components are working.
 
-###Prerequisites:
+### Prerequisites:
 * run the "Smoke Test" on each of the servers to verify that Bitnobi services and components are working correctly.
 
 
