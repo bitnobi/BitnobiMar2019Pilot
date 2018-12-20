@@ -63,6 +63,7 @@ bitnobi /bin/bash
 
 * The -p options expose port 8000 for the main Bitnobi UI and port 8888 for the Jupyter notebooks server.
 * The --name option gives the name "bitnobi" to the new docker container
+* the --cap-add IPC_LOCK allows the vault process to lock memory to prevent it from swapping out.
 * the --mount localtime option causes the container to use the same timezone as the host
 * the --mount bitnobiBackup option causes the backup directory in the container to map to the bitnobiBackup directory in the host. This allows the `bitnobiBackup.sh` command to store backups in the host filesystem rather than inside the container.
 
