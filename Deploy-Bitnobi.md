@@ -16,7 +16,7 @@
 * make sure no other server processes are using ports 8000 and 8888. If Jupyter Notebook is installed on your server, it will likely use port 8888. Please either halt it or reconfigure it to use some other port.
 
 # Deploy Bitnobi (default)
-By default, Bitnobi is bundled with self-signed certificates to support HTTPS. These will generate browser warnings the first time that a user connects to your Bitnobi site. If you have a CA signed certificate, please see [this section](#deploy-bitnobi-ca-signed-cert) for the extra steps.
+By default, Bitnobi is bundled with a self-signed certificate to support HTTPS. These will generate browser warnings the first time that a user connects to your Bitnobi site. If you have a CA signed certificate, please see [this section](#deploy-bitnobi-ca-signed-cert) for the extra steps.
 
 Log into the server and open a terminal window for the following steps. 
 
@@ -105,7 +105,7 @@ The first user to sign up to Bitnobi will become the `admin` user. Please sign u
 
 # Deploy Bitnobi (CA signed cert)
 
-If you have signed SSL certificates from a Certificate Authority that you wish to use with Bitnobi, you need take some extra steps during deployment. 
+If you have a signed SSL certificate from a Certificate Authority that you wish to use with Bitnobi, you need take some extra steps during deployment. 
 
 After step 3 (Create Bitnobi Backup Directory) please create a directory and copy over the certificate into it and name the files `key.pem` and `cert.pem`. For example if you used the "letsencrypt" site to create certificates with the subdomain name "demo.bitnobi.com" the steps would be:
 ```
@@ -115,7 +115,7 @@ sudo cp /etc/letsencrypt/live/demo.bitnobi.com/privkey1.pem bitnobiSslCerts/key.
 sudo cp /etc/letsencrypt/live/demo.bitnobi.com/fullchain.pem bitnobiSslCerts/cert.pem
 ```
 
-For step 4 (Create and Run a Bitnobi Container) substitute the following command which includes a mount point for the certificates:
+For step 4 (Create and Run a Bitnobi Container) substitute the following command which includes a mount point for your certificate:
 ```
 docker run -it \
 -p 8000:8000 -p 8888:8888 \
