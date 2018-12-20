@@ -127,6 +127,14 @@ docker run -it \
 bitnobi /bin/bash
 ```
 This will over-ride the default self-signed certificate in the Bitnobi image with your signed CA certificate.
+
+For step 5 (Start Bitnobi Processes) call the `vault-init.sh` with your Certificate domain name as a parameter before calling `startScript.sh`. For example if we have the subdomain name "demo.bitnobi.com" the steps would be
+```
+cd /home/Bitnobi-V1
+./vault-init.sh demo.bitnobi.com
+./startScript.sh
+```
+
 All other steps are unchanged.
 
 When you connect to the Bitnobi main page with your browser, you should no longer see any browser warnings about unsafe HTTPS certificates.
