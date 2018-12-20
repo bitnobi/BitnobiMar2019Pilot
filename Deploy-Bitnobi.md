@@ -37,8 +37,8 @@ docker rmi bitnobi
 login to the Bitnobi docker repository using your assigned userid/password and then pull the image to your server.
 ```
 docker login demo.bitnobi.com:5043
-docker pull demo.bitnobi.com:5043/bitnobi-aug-2018-pilot
-docker tag demo.bitnobi.com:5043/bitnobi-aug-2018-pilot bitnobi
+docker pull demo.bitnobi.com:5043/bitnobi-dec-2018-pilot
+docker tag demo.bitnobi.com:5043/bitnobi-dec-2018-pilot bitnobi
 ```
 The Bitnobi image is > 5GB in size so the pull request can take a few minutes to complete.
 
