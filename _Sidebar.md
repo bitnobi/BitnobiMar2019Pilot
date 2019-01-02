@@ -8,7 +8,7 @@
   * [[Configuring Federated Bitnobi]]
   * [[Backup and Restore|Backup and Restore]]
 * Using Bitnobi
-  * [[Demo videos]]
+  * [[Tutorial videos]]
   * [[Federation Overview]]
   * [[Workflow Elements]]
 
