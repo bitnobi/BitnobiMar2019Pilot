@@ -8,6 +8,7 @@ You can either stream them on your browser, or play it in VLC. To use in VLC cop
 * http://demo.bitnobi.com/videos/bitnobi-tutorial-3-of-4-2018-05-16.mp4
 * http://demo.bitnobi.com/videos/bitnobi-tutorial-4-of-4-2018-05-16.mp4
 * http://demo.bitnobi.com/videos/bitnobi-federation-2018-11-15.mp4
+* http://demo.bitnobi.com/videos/bitnobi-configuring-federation-2019-01-11.mp4
 * http://demo.bitnobi.com/videos/bitnobi-financial-transactions-demo.mov
 * http://demo.bitnobi.com/videos/bitnobi-jupyter-integration-2018-06-20.mp4
 * http://demo.bitnobi.com/videos/bitnobi-tensorflow-2018-09-07.mp4
