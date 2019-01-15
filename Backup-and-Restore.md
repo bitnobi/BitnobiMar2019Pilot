@@ -26,6 +26,7 @@ docker rm bitnobi
 docker run -it \
 -p 8000:8000 -p 8888:8888 \
 --name bitnobi \
+--cap-add IPC_LOCK \
 --mount type=bind,source="$(pwd)"/bitnobiBackup,target=/home/Bitnobi-V1/backup \
 --mount type=bind,source=/etc/localtime,target=/etc/localtime,readonly \
 bitnobi /bin/bash
